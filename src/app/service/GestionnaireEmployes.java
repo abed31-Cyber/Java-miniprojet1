@@ -53,5 +53,38 @@ public class GestionnaireEmployes {
     return totalsalaire;
 
    }
+
+   // Méthode pour trouver le salarié le mieux paye
+
+public Employe trouverLeMieuxPaye() {
+    // On vérifie si la liste n'est pas vide pour éviter un crash
+    if (listeEmployes.isEmpty()) {
+        return null; 
+    }
+
+    // On initialise avec le premier employé
+    Employe mieuxPaye = listeEmployes.get(0);
+
+    //  On parcourt la liste
+    for (Employe e : listeEmployes) {
+        //  On compare le SALAIRE TOTAL (avec bonus/primes)
+        if (e.calculerSalaireTotal() > mieuxPaye.calculerSalaireTotal()) {
+            mieuxPaye = e;
+        }
+    }
+
+    return mieuxPaye; // Retourne l'objet complet
+}
+
+   // Méthode pour lister par departement
+// On parcourt la liste des employés et on affiche ceux dont le département correspond à celui recherché
+public void listerParDepartement(String dept) {
+
+    for (Employe e : listeEmployes) {
+        if (e.getDepartement().equalsIgnoreCase(dept)) {
+            System.out.println(e.getNom());
+        }
+    }
+}
     
 }
