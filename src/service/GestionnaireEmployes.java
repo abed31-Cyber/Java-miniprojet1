@@ -4,6 +4,16 @@ import model.Employe;
 import java.util.ArrayList; // Pour utiliser les listes dynamiques
 import java.util.List;
 import java.util.Optional;
+/**
+ * Classe de gestion des employés
+ * @author
+ * @version 1.0
+ * @ List<Employe> : une liste qui peut contenir des objets de type Employe
+ * @ ArrayList : une implémentation de List qui permet de stocker les employés de manière dynamique (on peut ajouter/supprimer sans se soucier de la taille)
+ * @ Optional : une classe qui peut contenir un objet ou être vide, utilisée pour éviter les nulls et gérer les cas où un employé n'est pas trouvé lors de la recherche par ID  
+ * 
+ */
+
 
 public class GestionnaireEmployes {
 
